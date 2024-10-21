@@ -138,5 +138,20 @@ public class Lista<T> {
 			removeFirst();
 		}
 	}
+		public boolean contains(T valor)throws Exception{
+			if(isEmpty()) {
+				return false;
+			}
+			No<T> auxiliar=primeiro;
+			while(auxiliar !=null) {
+				if(auxiliar.dado.equals(valor)) {
+					return true;
+				}
+				auxiliar=auxiliar.proximo;
+			}
+			return false;
+		}
+
+}
 	
-}	
+	
